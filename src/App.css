@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+:root{
+  --background-color : cornflowerblue;
+  --board-background-color:bisque;
+  --board-border-color:burlywood;
+  --panel-background-color: lightgoldenrodyellow;
+  --panel-border-color: burlywood;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+body{
+  background-color: var(--background-color);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.app-container{
+  width: 800px;
+  height: 800px;
+  position : absolute;
+  left: 50%;
+  top: 10%;
+  margin-left: -400px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.panel{
+  position: absolute;
+  background-color: var(--panel-background-color);
+  border: 8px solid var(--panel-border-color);
+  -webkit-box-shadow: 7px 5px 15px 3px black;
+  box-shadow : 7px 5px 15px 3px black;
+  z-index: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header{
+  left:50%;
+  top: 90px;
+  height: 80px;
+  width: 300px;
+  margin-left: -120px;
 }
 
-.App-link {
-  color: #61dafb;
+.header-text{
+  font-size: 30px;
+  font-weight: bold;
+  width: 200px;
+  margin: 0;
+  position: absolute;
+  top: 50px;
+  left : 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer{
+  left: 50%;
+  top: 750px;
+  height: 80px;
+  width: 300px;
+  margin-left: -120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.footer button{
+  position: relative;
+  left: 50%;
+  top: 20%;
+  width: 150px;
+  height: 50px;
+  background-color: lightblue;
+  font-size : 20px;
+  -webkit-box-shadow: 3px 5px 10x 2px black;
+  box-shadow : 3px 5px 10px 2px black;
+  border: 5px solid chocolate;
+  font-weight: bold;
+}
+
+.footer button:hover{
+  background-color: chocolate;
+}
+.gameBoard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  padding: 20px;
+  width: 500px;
+  position: absolute;
+  left: 50%;
+  top:20%;
+  margin-left: -250px;
+  background-color: var(--board-background-color);
+  border: 8px solid var(--board-border-color);
+  border-radius: 8%;
+  -webkit-box-shadow: 7px 5px 15px 3px black;
+  box-shadow : 7px 5px 15px 3px black;
+}
+
+.gameCircle {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 50%;
+  border: 5px solid black;
+}
+.player0{
+  background-color: white;
+}
+
+.player1{
+  background-color: red;
+}
+
+.player2{
+  background-color: blue;
 }
